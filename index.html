@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayma Home - Bien-être et Ambiance pour votre Maison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS pour l'envoi d'emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="announcement-bar">
+            🚚 Livraison Gratuite partout au Maroc • 💰 Paiement à la livraison
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>🌸 Nayma Home</h1>
+                        <p class="tagline">L'art du bien-être à la maison</p>
+                    </div>
+                    <nav class="nav-menu">
+                        <a href="#accueil">Accueil</a>
+                        <a href="#produits">Nos Produits</a>
+                        <a href="#about">À Propos</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <div class="cart-icon" id="cart-icon">
+                        🛒 <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Bienvenue chez Nayma Home 🌿</h2>
+            <p class="hero-subtitle">L'art de transformer votre maison en un espace de détente, de parfum et de bien-être.</p>
+            <p class="hero-description">Découvrez nos diffuseurs d'arômes, huiles essentielles et accessoires modernes qui apportent calme, élégance et harmonie à votre intérieur.</p>
+            <p class="hero-tagline">🌸 <em>Respirez le confort. Vivez Nayma.</em> 🌸</p>
+            <a href="#produits" class="cta-button">Découvrir nos produits</a>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <h3>Nos Collections</h3>
+                <div class="sort-dropdown">
+                    <label for="sort">Trier par :</label>
+                    <select id="sort">
+                        <option value="featured">Produits populaires</option>
+                        <option value="price-low">Prix croissant</option>
+                        <option value="price-high">Prix décroissant</option>
+                        <option value="new">Nouveautés</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section" id="produits">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Pack Nayma Relax" data-price="199">
+                    <div class="product-badge">🔥 Promo</div>
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB .jpeg" alt="Pack Nayma Relax">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">🕯️ Pack Nayma Relax</h3>
+                        <p class="product-description">Humidificateur LED + Huile essentielle offerte</p>
+                        <div class="product-features">
+                            <span>💨 Silencieux</span>
+                            <span>💡 LED douce</span>
+                            <span>🔋 Rechargeable</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">299 DH</span>
+                            <span class="price-current">199 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Diffuseur Élégance" data-price="249">
+                    <div class="product-badge">✨ Nouveau</div>
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB 1Led Rechargeable USB 1.jpeg" alt="Diffuseur Élégance">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">🌺 Diffuseur Élégance</h3>
+                        <p class="product-description">Design moderne avec lumière LED apaisante</p>
+                        <div class="product-features">
+                            <span>🎨 Plusieurs couleurs</span>
+                            <span>⏱️ Minuteur</span>
+                            <span>🌊 Brume douce</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">349 DH</span>
+                            <span class="price-current">249 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Huiles Essentielles" data-price="149">
+                    <div class="product-badge">💚 Bio</div>
+                    <div class="product-image">
+                        <img src="Images/Huile essentiel Naturelle.jpeg" alt="Huiles Essentielles">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">🌿 Huiles Essentielles</h3>
+                        <p class="product-description">Collection de 6 parfums naturels</p>
+                        <div class="product-features">
+                            <span>🌸 Lavande</span>
+                            <span>🍋 Citron</span>
+                            <span>🌹 Rose</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">180 DH</span>
+                            <span class="price-current">149 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-id="4" data-name="Pack Complet Zen" data-price="399">
+                    <div class="product-badge">⭐ Best-seller</div>
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB 2.jpeg" alt="Pack Complet Zen">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">☁️ Pack Complet Zen</h3>
+                        <p class="product-description">Diffuseur Premium + 3 huiles + Bougie</p>
+                        <div class="product-features">
+                            <span>🎁 Pack complet</span>
+                            <span>🕯️ Bougie incluse</span>
+                            <span>📦 Belle boîte</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">599 DH</span>
+                            <span class="price-current">399 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-id="5" data-name="Mini Diffuseur Portable" data-price="129">
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB .jpeg" alt="Mini Diffuseur">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">🌙 Mini Diffuseur Portable</h3>
+                        <p class="product-description">Compact et parfait pour le bureau</p>
+                        <div class="product-features">
+                            <span>📱 USB</span>
+                            <span>🎒 Portable</span>
+                            <span>🤫 Silencieux</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">199 DH</span>
+                            <span class="price-current">129 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-id="6" data-name="Coffret Détente" data-price="329">
+                    <div class="product-badge">🎁 Cadeau idéal</div>
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB 1Led Rechargeable USB 1.jpeg" alt="Coffret Détente">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">💝 Coffret Détente</h3>
+                        <p class="product-description">Le cadeau parfait pour vos proches</p>
+                        <div class="product-features">
+                            <span>🎀 Emballage cadeau</span>
+                            <span>💌 Carte incluse</span>
+                            <span>✨ Premium</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">449 DH</span>
+                            <span class="price-current">329 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 - NOUVEAU -->
+                <div class="product-card" data-id="7" data-name="Pack Diffuseur + Huile Essentielle" data-price="250">
+                    <div class="product-badge">🌟 Offre Spéciale</div>
+                    <div class="product-image">
+                        <img src="Images/Diffuseur Led Rechargeable USB 2.jpeg" alt="Pack Diffuseur + Huile">
+                        <div class="product-overlay">
+                            <button class="quick-view">👁️ Aperçu rapide</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">🌸 Pack Diffuseur + Huile Essentielle Naturelle</h3>
+                        <p class="product-description">Diffuseur LED moderne + Huile essentielle 100% naturelle</p>
+                        <div class="product-features">
+                            <span>💧 Huile naturelle</span>
+                            <span>💡 LED multicolore</span>
+                            <span>🎁 Pack complet</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">350 DH</span>
+                            <span class="price-current">250 DH</span>
+                        </div>
+                        <button class="btn-add-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-load-more">Charger plus de produits</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h4>Livraison Gratuite</h4>
+                    <p>Partout au Maroc</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Paiement à la livraison</h4>
+                    <p>100% sécurisé</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h4>Produits Naturels</h4>
+                    <p>Huiles essentielles bio</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h4>Garantie Satisfait</h4>
+                    <p>Ou remboursé</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>🌸 À Propos de Nayma Home</h2>
+                    <p><strong>Marque marocaine moderne</strong> spécialisée dans le bien-être et l'ambiance à la maison.</p>
+                    <p>Nos produits : <strong>humidificateurs, huiles essentielles, senteurs, et accessoires déco apaisants.</strong></p>
+                    <p>Notre mission : transformer chaque maison en un espace de paix, de confort et d'harmonie.</p>
+                    <p class="about-tagline">💚 <em>Nayma Home — Le bien-être commence chez soi.</em></p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">✨ Design moderne et élégant</div>
+                    <div class="feature-item">🌿 Ingrédients naturels et bio</div>
+                    <div class="feature-item">🇲🇦 Fièrement marocain</div>
+                    <div class="feature-item">❤️ Service client à l'écoute</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>📞 Contactez-nous</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h4>WhatsApp</h4>
+                    <p>+212 6XX XXX XXX</p>
+                    <a href="#" class="contact-link">Discuter maintenant</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>contact@naymahome.ma</p>
+                    <a href="mailto:contact@naymahome.ma" class="contact-link">Envoyer un email</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Adresse</h4>
+                    <p>Casablanca, Maroc</p>
+                    <a href="#" class="contact-link">Voir sur la carte</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>🌸 Nayma Home</h4>
+                    <p>Ambiance • Détente • Senteurs naturelles</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📷 Instagram</a>
+                        <a href="#" class="social-icon">💬 TikTok</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>À propos du magasin</h4>
+                    <a href="#">À propos</a>
+                    <a href="#">Méthodes de paiement</a>
+                    <a href="#">Expédition et livraison</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Termes et politiques</h4>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Retours & échanges</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Service client</h4>
+                    <a href="#contact">Contactez-nous</a>
+                    <a href="#">Aide & FAQ</a>
+                    <a href="#">Suivi de commande</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nayma Home. Tous droits réservés. 🇲🇦</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212XXXXXXXXX" class="whatsapp-float" target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>🛒 Mon Panier</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-body" id="cart-items">
+                <div class="empty-cart">
+                    <p>Votre panier est vide</p>
+                    <span style="font-size: 60px;">🛍️</span>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">0 DH</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" disabled>
+                    Passer la commande
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-modal-content">
+            <div class="checkout-header">
+                <h2>📋 Finaliser la commande</h2>
+                <span class="close-checkout">&times;</span>
+            </div>
+            <div class="checkout-body">
+                <div class="order-summary">
+                    <h3>Résumé de la commande</h3>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total">
+                        <strong>Total à payer:</strong>
+                        <strong id="checkout-total-price">0 DH</strong>
+                    </div>
+                </div>
+                
+                <form id="checkout-form" class="checkout-form">
+                    <h3>Vos informations</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom complet <span class="required">*</span></label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telephone">Téléphone <span class="required">*</span></label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="06XX XXX XXX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ville">Ville <span class="required">*</span></label>
+                        <select id="ville" name="ville" required>
+                            <option value="">Sélectionnez votre ville</option>
+                            <option value="Casablanca">Casablanca</option>
+                            <option value="Rabat">Rabat</option>
+                            <option value="Marrakech">Marrakech</option>
+                            <option value="Fès">Fès</option>
+                            <option value="Tanger">Tanger</option>
+                            <option value="Agadir">Agadir</option>
+                            <option value="Meknès">Meknès</option>
+                            <option value="Oujda">Oujda</option>
+                            <option value="Kénitra">Kénitra</option>
+                            <option value="Tétouan">Tétouan</option>
+                            <option value="Salé">Salé</option>
+                            <option value="Temara">Temara</option>
+                            <option value="El Jadida">El Jadida</option>
+                            <option value="Mohammedia">Mohammedia</option>
+                            <option value="Beni Mellal">Beni Mellal</option>
+                            <option value="Autre">Autre ville</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adresse">Adresse complète <span class="required">*</span></label>
+                        <textarea id="adresse" name="adresse" required placeholder="Numéro, rue, quartier, ville..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes supplémentaires (optionnel)</label>
+                        <textarea id="notes" name="notes" placeholder="Instructions de livraison, préférences..." rows="2"></textarea>
+                    </div>
+
+                    <div class="payment-info">
+                        <div class="payment-icon">💰</div>
+                        <div>
+                            <strong>Paiement à la livraison</strong>
+                            <p>Vous payerez en espèces lors de la réception de votre commande</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-order-btn">
+                        ✓ Confirmer la commande
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS pour l'envoi d'emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="email-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
